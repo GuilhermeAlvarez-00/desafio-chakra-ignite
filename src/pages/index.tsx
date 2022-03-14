@@ -1,14 +1,12 @@
 import type { NextPage } from 'next'
-import { Text } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
+import { Header } from '../components/Header'
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Text color="yellow.500">OI</Text>
-      <Text>OI</Text>
-      <Text color="gray.50">OI</Text>
-      <Text color="gray.500">OI</Text>
-    </>
+    <Flex as="main" w="100%">
+      <Header />
+    </Flex>
   )
 }
 
