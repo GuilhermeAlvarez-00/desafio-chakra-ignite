@@ -9,8 +9,10 @@ import {
   useBreakpointValue,
   UnorderedList,
 } from '@chakra-ui/react'
+
 import { Header } from '../components/Header'
 import { TravelTypes } from '../components/TravelTypes'
+import { Slide } from '../components/Slide'
 
 const Home: NextPage = () => {
   const isWideVersion = useBreakpointValue({
@@ -119,6 +121,12 @@ const Home: NextPage = () => {
             >
               Vamos nessa? <br /> Então escolha seu continente
             </Heading>
+          </Flex>
+        </Flex>
+
+        <Flex as="section" w="100%" px="4" mt="52px" mb="10">
+          <Flex w="100%" maxW={1160} mx="auto">
+            <Slide />
           </Flex>
         </Flex>
       </Flex>
