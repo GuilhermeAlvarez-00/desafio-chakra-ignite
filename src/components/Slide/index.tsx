@@ -1,4 +1,3 @@
-import { Box, Heading, Text, Flex } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
 
@@ -7,7 +6,6 @@ import { SlideContainer } from './SlideContainer'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import './slide.module.css'
 
 export function Slide() {
   return (

@@ -1,10 +1,4 @@
 import { Box, Heading, Text, Flex } from '@chakra-ui/react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
-
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
 interface SlideContainerProps {
   image: string
