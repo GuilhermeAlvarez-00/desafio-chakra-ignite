@@ -1,14 +1,5 @@
 import type { NextPage } from 'next'
-import {
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Stack,
-  Image,
-  useBreakpointValue,
-  UnorderedList,
-} from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react'
 
 import { Header } from '../components/Header'
 import { TravelTypes } from '../components/TravelTypes'
@@ -16,14 +7,6 @@ import { Slide } from '../components/Slide'
 import { HomeBanner } from '../components/HomeBanner'
 
 const Home: NextPage = () => {
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    md: true,
-    lg: true,
-  })
-
-  console.log(isWideVersion)
-
   return (
     <>
       <Header />
