@@ -1,34 +1,40 @@
-import {
-  Flex,
-  Image,
-  Text,
-  useBreakpointValue,
-  ListItem,
-  Box,
-} from '@chakra-ui/react'
+import { Flex, Box, UnorderedList } from '@chakra-ui/react'
+import { TravelItem } from './TravelItem'
 
-interface TravelTypesProps {
-  image: string
-  text: string
-}
-
-export function TravelTypes({ image, text }: TravelTypesProps) {
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    md: true,
-  })
-
+export function TravelTypes() {
   return (
-    <ListItem display="flex" alignItems="center" flexDir="column" px="4">
-      {isWideVersion ? (
-        <Image w={[0, 65, 85]} src={image} alt={text} />
-      ) : (
-        <Box w="8px" h="8px" borderRadius="50%" bg="yellow.500" />
-      )}
+    <Flex as="section" w="100%" px="4">
+      <Flex
+        w="100%"
+        maxW={1160}
+        mx="auto"
+        justify="center"
+        align="center"
+        flexDir="column"
+      >
+        <UnorderedList
+          display="flex"
+          w="100%"
+          mt={['20', '20', '28', '20']}
+          mx="auto"
+          alignItems="center"
+          justifyContent={['center', 'space-between']}
+          flexWrap="wrap"
+          gap="4"
+        >
+          <TravelItem image="/images/cocktail.svg" text="vida noturna" />
 
-      <Text mt="6" fontSize={['18', '18', '24']} fontWeight="semibold">
-        {text}
-      </Text>
-    </ListItem>
+          <TravelItem image="/images/surf.svg" text="praia" />
+
+          <TravelItem image="/images/building.svg" text="moderno" />
+
+          <TravelItem image="/images/museum.svg" text="clássico" />
+
+          <TravelItem image="/images/earth.svg" text="e mais..." />
+        </UnorderedList>
+
+        <Box w={90} h="2px" mx="auto" mt="20" bg="gray.600" />
+      </Flex>
+    </Flex>
   )
 }

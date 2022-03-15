@@ -30,54 +30,18 @@ const Home: NextPage = () => {
       <Flex as="main" w="100%" flexDir="column">
         <HomeBanner />
 
-        <Flex as="section" w="100%" px="4">
-          <Flex
-            w="100%"
-            maxW={1160}
-            mx="auto"
-            justify="center"
-            align="center"
-            flexDir="column"
-          >
-            <UnorderedList
-              display="flex"
-              w="100%"
-              mt={['20', '20', '28', '20']}
-              mx="auto"
-              alignItems="center"
-              justifyContent={['center', 'space-between']}
-              flexWrap="wrap"
-              gap="4"
-            >
-              <TravelTypes image="/images/cocktail.svg" text="vida noturna" />
+        <TravelTypes />
 
-              <TravelTypes image="/images/surf.svg" text="praia" />
+        <Heading
+          mt="52px"
+          textAlign="center"
+          fontWeight="medium"
+          fontSize={['20', '36']}
+        >
+          Vamos nessa? <br /> Então escolha seu continente
+        </Heading>
 
-              <TravelTypes image="/images/building.svg" text="moderno" />
-
-              <TravelTypes image="/images/museum.svg" text="clássico" />
-
-              <TravelTypes image="/images/earth.svg" text="e mais..." />
-            </UnorderedList>
-
-            <Box w={90} h="2px" mx="auto" mt="20" bg="gray.600" />
-
-            <Heading
-              textAlign="center"
-              mt="52px"
-              fontSize={['20', '36']}
-              fontWeight="medium"
-            >
-              Vamos nessa? <br /> Então escolha seu continente
-            </Heading>
-          </Flex>
-        </Flex>
-
-        <Flex as="section" w="100%" px="4" mt="52px" mb="10">
-          <Flex w="100%" maxW={1160} mx="auto">
-            <Slide />
-          </Flex>
-        </Flex>
+        <Slide />
       </Flex>
     </>
   )
