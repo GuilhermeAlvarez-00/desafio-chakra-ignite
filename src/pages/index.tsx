@@ -5,10 +5,14 @@ import { Header } from '../components/Header'
 import { TravelTypes } from '../components/TravelTypes'
 import { Slide } from '../components/Slide'
 import { HomeBanner } from '../components/HomeBanner'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>WorldTrip</title>
+      </Head>
       <Header />
       <Flex as="main" w="100%" flexDir="column">
         <HomeBanner />
