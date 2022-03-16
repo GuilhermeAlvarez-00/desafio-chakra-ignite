@@ -31,7 +31,9 @@ export function Header() {
             />
           </Link>
         )}
-        <Image src="/images/logo.svg" alt="Logo" w={184} />
+        <Link href="/">
+          <Image cursor="pointer" src="/images/logo.svg" alt="Logo" w={184} />
+        </Link>
       </Flex>
     </Flex>
   )
