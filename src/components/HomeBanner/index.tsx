@@ -11,15 +11,23 @@ import {
 export function HomeBanner() {
   const isWideVersion = useBreakpointValue({
     base: false,
-    md: true,
     lg: true,
   })
+
+  const test = useBreakpointValue({
+    base: 'base',
+    sm: 'small',
+    md: 'medium',
+    lg: 'large',
+  })
+
+  console.log(test)
 
   return (
     <Flex as="section" w="100%">
       <Box
         w="100%"
-        h={['auto', 435, 335]}
+        h={[164, 235]}
         bgImage="/images/background.png"
         bgPosition="center"
         bgRepeat="no-repeat"
@@ -42,7 +50,7 @@ export function HomeBanner() {
               color="gray.50"
               fontSize={['20', '32']}
               fontWeight="medium"
-              lineHeight="54px"
+              lineHeight={['normal', 'normal', '54px']}
             >
               5 Continentes, <br /> infinitas possibilidades.
             </Heading>
@@ -62,7 +70,7 @@ export function HomeBanner() {
               src="/images/airplane.svg"
               alt="Avião nas nuvens"
               mb="-100px"
-              w={[320, 340, 340, 417]}
+              w={[320, 340, 417]}
             />
           )}
         </Flex>
