@@ -11,7 +11,7 @@ import {
 export function HomeBanner() {
   const isWideVersion = useBreakpointValue({
     base: false,
-    lg: true,
+    md: true,
   })
 
   const test = useBreakpointValue({
@@ -27,7 +27,7 @@ export function HomeBanner() {
     <Flex as="section" w="100%">
       <Box
         w="100%"
-        h={[164, 235]}
+        h={[164, 235, 318, 368]}
         bgImage="/images/background.png"
         bgPosition="center"
         bgRepeat="no-repeat"
@@ -43,7 +43,7 @@ export function HomeBanner() {
           mx="auto"
           align="center"
           justify="space-between"
-          flexDir={['column', 'column', 'column', 'row']}
+          flexDir={['column', 'column', 'row', 'row']}
         >
           <Stack spacing="5">
             <Heading
@@ -69,8 +69,8 @@ export function HomeBanner() {
             <Image
               src="/images/airplane.svg"
               alt="Avião nas nuvens"
-              mb="-100px"
-              w={[320, 340, 417]}
+              mb={[null, null, '0', '-160px']}
+              w={[null, null, 360, 416]}
             />
           )}
         </Flex>

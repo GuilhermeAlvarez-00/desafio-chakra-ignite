@@ -15,10 +15,10 @@ export function TravelTypes() {
         <UnorderedList
           display="flex"
           w="100%"
-          mt={['20', '20', '28', '20']}
+          mt={['20', '20', '28', '32']}
           mx="auto"
           alignItems="center"
-          justifyContent={['center', 'space-between']}
+          justifyContent={{ base: 'center', lg: 'space-between' }}
           flexWrap="wrap"
           gap="4"
         >
